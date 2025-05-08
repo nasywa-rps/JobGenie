@@ -6,20 +6,21 @@
 }
 
 html, body {
-  height: 100%;
+  height: auto; /* Ganti height: 100% menjadi auto */
   margin: 0;
   padding: 0;
   width: 100%;
   font-family: Arial, sans-serif;
   background-color: #f9f6ec;
   overflow-x: hidden;
+  overflow-y: auto; /* Tambahkan overflow-y: auto */
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  padding-top: 80px; /* Increased padding for better spacing */
+  min-height: 100vh; /* Ganti height: 100vh menjadi min-height: 100vh */
+  padding-top: 80px; /* Tetap mempertahankan padding-top */
 }
 
 .content-wrapper {
@@ -386,10 +387,10 @@ main,
 .login-bg {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  height: 100vh;
   background: linear-gradient(to bottom, #3b1f7a, #6c4cd5);
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .login-bg::before {
@@ -419,7 +420,7 @@ main,
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   z-index: 1;
 }
