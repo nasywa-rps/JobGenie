@@ -17,28 +17,34 @@ function App() {
     links: [
       { text: "Home", url: "/#" },
       { text: "Job Form", url: "/jobform" },
-      { text: "Login", url: "/login" },
-      { text: "Lorem", url: "#" }
+      { text: "Login", url: "/login" }
     ],
     profileName: "Person 1",
     profileIcon: "Male User.png",
     profileIconAlt: "Profile Icon"
   };
 
-  const jobGenieText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-  fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-  qui officia deserunt mollit anim id est laborum.`;
+  const jobGenieText = `JobGenie adalah platform pencari kerja berbasis AI yang mempermudah proses pencarian pekerjaan hanya dengan mengunggah CV. 
+  Dengan teknologi cerdas, JobGenie menganalisis isi CV Anda dan secara otomatis mencarikan lowongan kerja yang paling sesuai dengan latar belakang, 
+  keterampilan, dan pengalaman Anda.`;
+
+  const jobGenieText2 = [
+    "Rekomendasi kerja akurat berdasarkan CV Anda.",
+    "AI mempercepat pencarian pekerjaan secara otomatis.",
+    "Pengalaman pengguna yang dipersonalisasi.",
+    "Proses cepat dan efisien hanya dengan sekali unggah.",
+    "Desain antarmuka yang intuitif dan mudah digunakan."
+  ];
+  
+
 
   const searchCardData = {
-    title: "Cara Kerja JobGenie",
+    title: "Cara Kerja JobGenie:",
     steps: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      "Unggah CV Anda ke platform JobGenie.",
+      "AI menganalisis isi CV untuk memahami pengalaman kerja, pendidikan, dan keahlian Anda.",
+      "Sistem mencarikan lowongan kerja yang paling cocok dengan profil Anda.",
+      "Lihat dan lamar pekerjaan yang direkomendasikan langsung dari platform."
     ],
     imageUrl: "images.jpg",
     imageAlt: "Uji Sampel"
@@ -57,7 +63,7 @@ function App() {
             <Navbar {...navbarData} />
             <div style={{ marginTop: '80px' }} className="app-content">
               <Card title="Apa itu JobGenie?" text={jobGenieText} />
-              <Card title="Keuntungan JobGenie" text={jobGenieText} />
+              <Card title="Keuntungan JobGenie" text={jobGenieText2} />
               <SearchCard {...searchCardData} />
             </div>
             <Footer text={footerText} />

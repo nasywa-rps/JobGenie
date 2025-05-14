@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SearchCard = ({ 
   title, 
@@ -8,6 +9,8 @@ const SearchCard = ({
   buttonText = "Mulai Pencarian", 
   buttonIcon = "rightarrow.png" 
 }) => {
+  const navigate = useNavigate();
+
   return (
     <div style={{ width: "100%", padding: "24px 0" }}>
       <div
@@ -75,6 +78,7 @@ const SearchCard = ({
                     onMouseLeave={(e) =>
                       (e.currentTarget.style.backgroundColor = "rgba(248, 181, 85, 0.7)")
                     }
+                    onClick={() => navigate('/jobform')}
                   >
                     <span
                       style={{
