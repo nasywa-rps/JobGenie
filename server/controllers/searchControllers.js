@@ -6,7 +6,7 @@ export const searchJob = async (req, res) => {
     const cvPath = req.file?.path;
 
     const search = new Search({
-      jobType: JSON.parse(jobType), // array
+      jobType: jobType ? JSON.parse(jobType) : [],
       experience,
       location,
       salaryRange,
