@@ -17,6 +17,6 @@ Web-app dipilih karena lebih mudah diakses tanpa harus download/install serta le
 | **Fitur**                  | **Keterangan**                                                                                  | 
 | -------------------------- | ---------------------------------------------------------------------------------------------- | 
 | Login dan Sign Up          | Proses autentikasi agar pengguna dapat menyimpan riwayat CV dan pencocokan pekerjaan agar bisa diakses kembali. Kemudian, proses ini dilakukan agar rekomendasi AI personalized untuk setiap pengguna. |
-| Input CV                   | Input berupa PDF atau text file. Kemudian, informasi penting seperti pengalaman kerja, skill, dan pendidikan akan diekstrak. |
+| Input CV                   | Input berupa PDF. Kemudian, informasi penting seperti pengalaman kerja, skill, dan pendidikan akan diekstrak. |
 | Job-Matching               | Memberi output berupa rekomendasi pekerjaan berdasarkan CV, skill, dan preferensi pengguna.                                |
 
