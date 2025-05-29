@@ -19,7 +19,7 @@ const storage = new CloudinaryStorage({
   cloudinary,
   params: {
     folder: 'jobgenie-cv',
-    allowed_formats: ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png'],
+    allowed_formats: ['pdf'],
     public_id: (req, file) => `${Date.now()}-${file.originalname}`,
   },
 });
@@ -27,7 +27,7 @@ const storage = new CloudinaryStorage({
 const fileFilter = (req, file, cb) => {
   const allowed = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
   if (allowed.includes(file.mimetype)) cb(null, true);
-  else cb(new Error('Only PDF, DOC, DOCX files are allowed'));
+  else cb(new Error('Only PDF files are allowed'));
 };
 
 const upload = multer({

@@ -245,7 +245,7 @@ const JobForm = () => {
                       <input
                         type="file"
                         onChange={handleFileChange}
-                        accept=".pdf,.doc,.docx"
+                        accept=".pdf"
                         className="hidden"
                         id="cv-upload"
                       />
@@ -258,7 +258,7 @@ const JobForm = () => {
                             {formData.cvFile ? formData.cvFile.name : "Klik untuk upload CV"}
                           </span>
                           <span className="text-xs text-gray-500">
-                            PDF, DOC, or DOCX (max 5MB)
+                            PDF only
                           </span>
                         </div>
                       </label>
