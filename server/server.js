@@ -5,11 +5,8 @@ import cors from 'cors';
 import connectDB from './db.js';
 import authRoutes from './routes/authRoutes.js';
 import searchRoutes from './routes/searchRoutes.js';
-<<<<<<< HEAD
 import classifyRoutes from './routes/classifyRoutes.js';
-=======
 import cloudinary from './cloudinary.js';  
->>>>>>> 1971943609179439c6df62417522c0b1b80701f9
 
 const app = express();
 
