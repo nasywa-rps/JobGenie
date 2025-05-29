@@ -1,12 +1,22 @@
-# React + Vite
+# Senpro-B3-09
+Senior Project Kelompok Info Loker! (B3_09)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ketua Kelompok: Gabriella Eileen Gultom - 22/503523/TK/55019 - Project Manager & AI Developer  
+Anggota 1: Nasywa Rahmadhani Putri Setiawan - 22/498375/TK/54665 - Back-End Developer & Cloud Engineer
+Anggota 2: 
 
-Currently, two official plugins are available:
+## Nama Produk: JobGenie
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+JobGenie adalah web-app berbasis AI yang membantu pencari kerja menemukan pekerjaan yang sesuai dengan keterampilan, pengalaman, dan preferensi mereka. AI menganalisis CV dan rekomendasi pekerjaan berdasarkan skill, bukan hanya keyword sehingga memungkinkan rekomendasi lowongan yang lebih akurat. Harapannya,  JobGenie dapat membantu menyediakan informasi tentang lowongan yang mungkin tidak terjangkau pekerja dan membantu memilah lowongan di mana pekerja tersebut memiliki kesempatan besar untuk diterima.
 
-## Expanding the ESLint configuration
+Web-app dipilih karena lebih mudah diakses tanpa harus download/install serta lebih fleksibel dalam integrasi dengan platform lain. Selain itu, web-app juga optimal untuk pencari kerja yang butuh layar besar & multitasking, tetapi bisa diakses di berbagai ukuran device pula.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Rancangan Fitur Solusi
+
+
+| **Fitur**                  | **Keterangan**                                                                                  | 
+| -------------------------- | ---------------------------------------------------------------------------------------------- | 
+| Login dan Sign Up          | Proses autentikasi agar pengguna dapat menyimpan riwayat CV dan pencocokan pekerjaan agar bisa diakses kembali. Kemudian, proses ini dilakukan agar rekomendasi AI personalized untuk setiap pengguna. |
+| Input CV                   | Input berupa PDF atau text file. Kemudian, informasi penting seperti pengalaman kerja, skill, dan pendidikan akan diekstrak. |
+| Job-Matching               | Memberi output berupa rekomendasi pekerjaan berdasarkan CV, skill, dan preferensi pengguna.                                |
+
