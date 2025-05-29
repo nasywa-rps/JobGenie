@@ -24,6 +24,7 @@
     "framer-motion": "^12.11.3",
     "mongodb": "^6.16.0",
     "mongoose": "^8.15.1",
+    "multer": "^2.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.5.3",
