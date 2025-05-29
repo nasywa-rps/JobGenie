@@ -7,6 +7,6 @@ const router = express.Router();
 
 const upload = multer({ dest: 'uploads/' });
 
-router.post('/classify', upload.single('cv'), classifyCV);
+router.post('/', upload.single('cv'), classifyCV);
 
 export default router;

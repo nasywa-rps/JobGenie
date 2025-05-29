@@ -18,15 +18,15 @@ app.add_middleware(
 
 
 @app.post("/classify")
-async def classify_pdf(file: UploadFile = File(...)):
+async def classify_pdf(cv: UploadFile = File(...)):
     # Save uploaded file temporarily
     temp_dir = "temp"
     os.makedirs(temp_dir, exist_ok=True)
-    temp_path = os.path.join(temp_dir, file.filename)
+    temp_path = os.path.join(temp_dir, cv.filename)
 
     try:
         with open(temp_path, "wb") as f:
-            f.write(await file.read())
+            f.write(await cv.read())
 
         # Step 1: Extract text from CV
         parsed_text = process_uploaded_file(temp_path)

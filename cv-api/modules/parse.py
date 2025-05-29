@@ -96,17 +96,17 @@ def process_document(file_path):
     else:
         return f"Unsupported file format: {file_extension}"
 
-def process_uploaded_file(file):
-    """Process an uploaded file object (e.g., from Flask or Streamlit)"""
+def process_uploaded_file(file_path):
     try:
-        return process_document(file.name)
+        return process_document(file_path)
     except Exception as e:
         return f"Error processing file: {str(e)}"
 
-# Example usage:
-if __name__ == "__main__":
-    # Example for direct file processing
-    sample_file = "path/to/document.pdf"
-    if os.path.exists(sample_file):
-        extracted_text = process_document(sample_file)
-        print(f"Extracted {len(extracted_text)} characters of text")
+
+# # Example usage:
+# if __name__ == "__main__":
+#     # Example for direct file processing
+#     sample_file = "path/to/document.pdf"
+#     if os.path.exists(sample_file):
+#         extracted_text = process_document(sample_file)
+#         print(f"Extracted {len(extracted_text)} characters of text")

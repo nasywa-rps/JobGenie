@@ -8,7 +8,7 @@ export const classifyCV = async (req, res) => {
     const filePath = req.file.path;
 
     const formData = new FormData();
-    formData.append('file', fs.createReadStream(filePath));
+    formData.append('cv', fs.createReadStream(filePath));
 
     const response = await axios.post('http://127.0.0.1:8000/classify', formData, {
       headers: formData.getHeaders(),
