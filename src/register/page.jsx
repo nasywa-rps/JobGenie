@@ -24,7 +24,7 @@ const RegisterPage = () => {
       return;
     }
 
-    axios.post('http://localhost:3001/register', { username, password })
+    axios.post('http://jobgenie-production.up.railway.app/api/auth/register', { username, password })
       .then(result => console.log(result))
       .catch(err => console.log(err));
   };
