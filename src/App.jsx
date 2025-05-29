@@ -197,21 +197,21 @@ function App() {
       {
         id: 1,
         content: "JobGenie membantu saya menemukan pekerjaan yang sesuai dengan keahlian saya hanya dalam waktu 2 minggu. Sangat direkomendasikan!",
-        author: "Arden Ganteng",
+        author: "Budi",
         role: "Software Engineer",
         avatar: "https://randomuser.me/api/portraits/men/1.jpg"
       },
       {
         id: 2,
         content: "Platform yang sangat intuitif dan mudah digunakan. AI-nya sangat akurat dalam merekomendasikan lowongan yang sesuai dengan CV saya.",
-        author: "Ijal Preman Kei Kecil",
+        author: "Angielina",
         role: "UI/UX Designer",
         avatar: "https://randomuser.me/api/portraits/men/3.jpg"
       },
       {
         id: 3,
         content: "Saya sudah mencoba berbagai platform pencari kerja, tapi JobGenie adalah yang terbaik. Rekomendasi yang diberikan sangat relevan.",
-        author: "Sanie Seturan",
+        author: "Siti",
         role: "Marketing Specialist",
         avatar: "https://randomuser.me/api/portraits/men/2.jpg"
       }
