@@ -4,6 +4,7 @@ import User from '../models/authModels.js';
 
 export const register = async (req, res) => {
   const { username, password } = req.body;
+  console.log("req.body:", req.body);
   try {
     const existing = await User.findOne({ username });
     if (existing) return res.status(400).json({ message: 'Username already exists' });
@@ -19,6 +20,7 @@ export const register = async (req, res) => {
 
 export const login = async (req, res) => {
   const { username, password } = req.body;
+  console.log("body:", req.body);
   try {
     const user = await User.findOne({ username });
     if (!user) return res.status(400).json({ message: 'Invalid credentials' });
