@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './login.css'; 
 
 const LoginPage = () => {
@@ -23,10 +24,19 @@ const LoginPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    navigate('/');
+    const { username, password } = formData;
+    try {
+      const res = await axios.post('http://localhost:5000/api/auth/login', { username, password });
+      // save token to localStorage or context
+      localStorage.setItem('token', res.data.token);
+      navigate('/');
+      alert('Login success!');
+    } catch (err) {
+      console.log(err);
+    }
+
   };
 
   return (
