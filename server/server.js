@@ -15,6 +15,8 @@ app.use('/api/search', searchRoutes);
 
 const PORT = process.env.PORT || 5000;
 
+console.log('All ENV Vars:', process.env);
+
 connectDB().then(() => {
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 });
