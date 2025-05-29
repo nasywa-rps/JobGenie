@@ -19,7 +19,7 @@ const storage = new CloudinaryStorage({
   cloudinary,
   params: {
     folder: 'jobgenie-cv',
-    allowed_formats: ['pdf', 'doc', 'docx'],
+    allowed_formats: ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png'],
     public_id: (req, file) => `${Date.now()}-${file.originalname}`,
   },
 });

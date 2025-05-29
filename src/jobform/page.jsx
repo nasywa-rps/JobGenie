@@ -9,6 +9,7 @@ import { Label } from "../components/ui/label";
 import { RadioGroup, RadioGroupItem } from "../components/ui/radio-group";
 import { Separator } from "../components/ui/separator";
 import { motion } from 'framer-motion';
+import axios from 'axios';
 
 // Constants for form options
 const WORK_PREFERENCES = ['WFO', 'WFH', 'Hybrid'];
@@ -111,11 +112,10 @@ const JobForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Validate form
+  
     const requiredFields = ['workPreference', 'experience', 'location', 'salaryRange'];
     const missingFields = requiredFields.filter(field => !formData[field]);
-
+  
     if (missingFields.length > 0 || formData.jobTypes.length === 0 || !formData.cvFile) {
       setNotification({
         message: 'Mohon lengkapi semua field yang diperlukan',
@@ -124,19 +124,32 @@ const JobForm = () => {
       setIsSubmitting(false);
       return;
     }
-
-    // Simulate API call
-    setTimeout(() => {
-      setNotification({ message: 'Pencarian lowongan berhasil!', type: 'success' });
-      console.log('Submitted Data:', formData);
-      setIsSubmitting(false);
-
-      // Redirect after successful submission
-      setTimeout(() => {
-        navigate('/joblist');
-      }, 1000);
-    }, 1500);
-  };
+  
+    // Create FormData object
+    const formDataToSend = new FormData();
+    formDataToSend.append('jobType', JSON.stringify(formData.jobTypes));
+    formDataToSend.append('experience', formData.experience);
+    formDataToSend.append('location', formData.location);
+    formDataToSend.append('salaryRange', formData.salaryRange);
+    formDataToSend.append('cv', formData.cvFile); // Make sure this matches multer's .single('cv')
+  
+    axios.post('http://localhost:5000/api/search', formDataToSend, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    })
+      .then(result => {
+        console.log(result);
+        setNotification({ message: 'Pencarian lowongan berhasil!', type: 'success' });
+        setIsSubmitting(false);
+        setTimeout(() => navigate('/joblist'), 1000);
+      })
+      .catch(err => {
+        console.log(err);
+        setNotification({ message: 'Terjadi kesalahan saat mengirim data.', type: 'error' });
+        setIsSubmitting(false);
+      });
+  };  
 
   const MotionWrapper = motion ? motion.div : 'div';
   const cardAnimation = {
