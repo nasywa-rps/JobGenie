@@ -25,8 +25,15 @@ const RegisterPage = () => {
     }
 
     axios.post('http://localhost:5000/api/auth/register', { username, password })
-      .then(result => console.log(result))
-      .catch(err => console.log(err));
+      .then(result => {
+      console.log(result);
+      alert("Register berhasil! Silakan login.");
+      navigate('/login'); // <-- mengarahkan ke halaman login
+    })
+    .catch(err => {
+      console.log(err);
+      alert("Register gagal! Username mungkin sudah dipakai.");
+    });
   };
 
   return (
